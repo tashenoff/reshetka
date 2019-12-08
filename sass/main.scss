@@ -1,0 +1,403 @@
+$gold: #e1b783;
+$white-gold: #e8d1b3;
+
+$gray90: #3e4345;
+$gray80: #5e6366;
+$black: #0d0d0d;
+
+@font-face {
+  font-family: "Quicksand";
+  src: local("Quicksand Regular"), local("Quicksand-Regular"),
+    url("/fonts/quicksandregular.woff2") format("woff2"),
+    url("/fonts/quicksandregular.woff") format("woff"),
+    url("/fonts/quicksandregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lighthaus";
+  src: url("/fonts/Lighthaus.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/Lighthaus.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/Lighthaus.otf") format("opentype"),
+    //  Open Type Font  url("/fonts/Lighthaus.svg") format("svg"),
+      /* Legacy iOS */ url("/fonts/Lighthaus.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("/fonts/Lighthaus.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/Lighthaus.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  // background-color: #333;
+  position: absolute;
+  z-index: 11111111;
+  line-height: 0;
+  width: 100%;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+li {
+  float: left;
+  line-height: 1em;
+}
+
+.left {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: black;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: $gold;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.img-wrapper {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  padding: 1em;
+
+  position: relative;
+}
+
+.card-title {
+  z-index: 19;
+  display: block;
+  h5 {
+    margin-top: 0.5em;
+  }
+}
+
+.img-bg {
+  display: block;
+  width: 100%;
+  height: 80%;
+
+  background-size: cover;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 9%;
+  left: 47%;
+}
+
+.mt-5 {
+  margin-top: 5em;
+}
+
+.about-us {
+  background-image: url(/img/kovka3.png);
+  background-repeat: no-repeat;
+
+  height: 100vh;
+  background-size: auto 47%;
+}
+
+.about-us-content {
+  background: #fff;
+  position: relative;
+
+  display: block;
+  padding: 1em;
+  bottom: 0;
+  margin: 0em 1em 0em 1em;
+}
+
+.bg-home {
+  background-image: url(/img/bg-mob.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  h2 {
+    // margin-bottom: 2em;
+    color: #fff;
+  }
+  h5 {
+    color: #fff;
+  }
+}
+
+.w-50 {
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+footer {
+  background-color: $black;
+  height: 104px;
+  display: block;
+}
+
+.card-body {
+  img {
+    max-width: 100%;
+  }
+}
+
+.numer-wrapper {
+  text-align: center;
+}
+
+.banner {
+  background-image: url(/img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 28em;
+  display: flex;
+  align-items: center;
+  h3,
+  p {
+    color: #fff;
+  }
+}
+
+.brand {
+  width: 161px;
+  padding: 14px 16px;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+  color: $gray80;
+}
+
+h2 {
+  font-family: "Lighthaus", sans-serif;
+  font-size: 1.75em;
+  letter-spacing: 0.1em;
+  color: $gray90;
+}
+
+h5 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  font-weight: 400;
+  color: $gray90;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-family: "Lighthaus", sans-serif;
+  color: $gray90;
+}
+
+p {
+  color: $gray80;
+}
+
+.big-outline {
+  background-color: transparent;
+  display: none;
+  font-family: Quicksand;
+  padding: 0.8em 1em;
+  cursor: pointer;
+  color: #fff;
+  letter-spacing: 0.1em;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  transition: 0.3s;
+  &:hover {
+    background-color: $gold;
+    border: 1px solid $gold;
+  }
+}
+
+.big-gold {
+  background-color: $gold;
+  font-family: Quicksand;
+  padding: 1em 1.6em;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+  &:hover {
+    background-color: $white-gold;
+  }
+}
+
+.card {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .bg-home {
+    background-image: url(/img/bg-home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    text-align: left;
+    padding: 0;
+    align-items: center;
+    h2 {
+      font-size: 3.75em;
+    }
+    h5 {
+      color: #fff;
+      font-size: 1.5em;
+      text-align: left;
+    }
+  }
+  .big-outline {
+    display: block;
+  }
+  .col-lg-3 {
+    padding: 0;
+  }
+
+  .big-gold {
+    padding: 1.4em 2.8em;
+  }
+
+  .big-outline-gold {
+    background-color: transparent;
+    cursor: pointer;
+    font-family: Quicksand;
+    padding: 1.4em 2.8em;
+    letter-spacing: 0.1em;
+    border: 1px solid $gold;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    transition: 0.3s;
+    &:hover {
+      background-color: #fff;
+      border: none;
+    }
+  }
+
+  h3 {
+    font-size: 3em;
+  }
+
+  .img-wrapper {
+    height: 290px;
+    width: 100%;
+  }
+
+  .w-50 {
+    max-width: 70%;
+  }
+
+  .about-us {
+    background-image: url(/img/kovka3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+  }
+
+  .about-us-content {
+    margin-top: 15%;
+    position: relative;
+    max-width: 50%;
+  }
+
+  .about-us:before {
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+    height: 80%;
+  }
+
+  .arrow-down {
+    bottom: 5%;
+    left: 50%;
+  }
+
+  h2 {
+    font-family: "Lighthaus", sans-serif;
+    font-size: 3.75em;
+    color: $gray90;
+  }
+}
+
+@media (min-width: 1080px) {
+}

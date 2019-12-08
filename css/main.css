@@ -1,0 +1,352 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Quicksand";
+  src: local("Quicksand Regular"), local("Quicksand-Regular"), url("/fonts/quicksandregular.woff2") format("woff2"), url("/fonts/quicksandregular.woff") format("woff"), url("/fonts/quicksandregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lighthaus";
+  src: url("/fonts/Lighthaus.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Lighthaus.eot?#iefix") format("embedded-opentype"), url("/fonts/Lighthaus.otf") format("opentype"), url("/fonts/Lighthaus.ttf") format("truetype"), url("/fonts/Lighthaus.woff") format("woff"), url("/fonts/Lighthaus.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 11111111;
+  line-height: 0;
+  width: 100%;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+
+li {
+  float: left;
+  line-height: 1em; }
+
+.left {
+  float: right; }
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; }
+
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: black;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001; }
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  -webkit-animation: preloader-rotate 2s infinite linear;
+          animation: preloader-rotate 2s infinite linear; }
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #e1b783;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  -webkit-animation: preloader-bounce 2s infinite ease-in-out;
+          animation: preloader-bounce 2s infinite ease-in-out; }
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s; }
+
+@-webkit-keyframes preloader-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes preloader-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes preloader-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes preloader-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.img-wrapper {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  padding: 1em;
+  position: relative; }
+
+.card-title {
+  z-index: 19;
+  display: block; }
+  .card-title h5 {
+    margin-top: 0.5em; }
+
+.img-bg {
+  display: block;
+  width: 100%;
+  height: 80%;
+  background-size: cover; }
+
+.arrow-down {
+  position: absolute;
+  bottom: 9%;
+  left: 47%; }
+
+.mt-5 {
+  margin-top: 5em; }
+
+.about-us {
+  background-image: url(/img/kovka3.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: auto 47%; }
+
+.about-us-content {
+  background: #fff;
+  position: relative;
+  display: block;
+  padding: 1em;
+  bottom: 0;
+  margin: 0em 1em 0em 1em; }
+
+.bg-home {
+  background-image: url(/img/bg-mob.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .bg-home h2 {
+    color: #fff; }
+  .bg-home h5 {
+    color: #fff; }
+
+.w-50 {
+  max-width: 100%; }
+
+img {
+  width: 100%; }
+
+footer {
+  background-color: #0d0d0d;
+  height: 104px;
+  display: block; }
+
+.card-body img {
+  max-width: 100%; }
+
+.numer-wrapper {
+  text-align: center; }
+
+.banner {
+  background-image: url(/img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 28em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .banner h3,
+  .banner p {
+    color: #fff; }
+
+.brand {
+  width: 161px;
+  padding: 14px 16px; }
+
+body {
+  background-color: #fff;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+  color: #5e6366; }
+
+h2 {
+  font-family: "Lighthaus", sans-serif;
+  font-size: 1.75em;
+  letter-spacing: 0.1em;
+  color: #3e4345; }
+
+h5 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  font-weight: 400;
+  color: #3e4345; }
+
+h3 {
+  font-size: 1.5em;
+  font-family: "Lighthaus", sans-serif;
+  color: #3e4345; }
+
+p {
+  color: #5e6366; }
+
+.big-outline {
+  background-color: transparent;
+  display: none;
+  font-family: Quicksand;
+  padding: 0.8em 1em;
+  cursor: pointer;
+  color: #fff;
+  letter-spacing: 0.1em;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .big-outline:hover {
+    background-color: #e1b783;
+    border: 1px solid #e1b783; }
+
+.big-gold {
+  background-color: #e1b783;
+  font-family: Quicksand;
+  padding: 1em 1.6em;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .big-gold:hover {
+    background-color: #e8d1b3; }
+
+.card {
+  display: block; }
+
+@media screen and (min-width: 768px) {
+  .bg-home {
+    background-image: url(/img/bg-home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    padding: 0;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .bg-home h2 {
+      font-size: 3.75em; }
+    .bg-home h5 {
+      color: #fff;
+      font-size: 1.5em;
+      text-align: left; }
+  .big-outline {
+    display: block; }
+  .col-lg-3 {
+    padding: 0; }
+  .big-gold {
+    padding: 1.4em 2.8em; }
+  .big-outline-gold {
+    background-color: transparent;
+    cursor: pointer;
+    font-family: Quicksand;
+    padding: 1.4em 2.8em;
+    letter-spacing: 0.1em;
+    border: 1px solid #e1b783;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .big-outline-gold:hover {
+      background-color: #fff;
+      border: none; }
+  h3 {
+    font-size: 3em; }
+  .img-wrapper {
+    height: 290px;
+    width: 100%; }
+  .w-50 {
+    max-width: 70%; }
+  .about-us {
+    background-image: url(/img/kovka3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative; }
+  .about-us-content {
+    margin-top: 15%;
+    position: relative;
+    max-width: 50%; }
+  .about-us:before {
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+    height: 80%; }
+  .arrow-down {
+    bottom: 5%;
+    left: 50%; }
+  h2 {
+    font-family: "Lighthaus", sans-serif;
+    font-size: 3.75em;
+    color: #3e4345; } }
